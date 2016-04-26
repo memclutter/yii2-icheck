@@ -1,0 +1,32 @@
+{
+    "name": "memclutter/yii2-icheck",
+    "type": "yii2-extension",
+    "description": "Yii2 icheck plugin integration",
+    "keywords": ["yii2", "checkbox", "js"],
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/memclutter/yii2-icheck/issues",
+        "source": "https://github.com/memclutter/yii2-icheck"
+    },
+    "authors": [
+        {
+            "name": "Memory Clutter",
+            "email": "memclutter@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/icheck": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "memclutter\\ICheck\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
