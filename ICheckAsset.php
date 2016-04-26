@@ -79,4 +79,21 @@ class ICheckAsset extends AssetBundle
             $jsFile,
         ];
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function registerAssetFiles($view)
+    {
+        parent::registerAssetFiles($view);
+
+        $cssClassSuffix = str_replace('/', '-', self::$skin);
+        $view->registerJs(
+            '$("input").iCheck({
+                checkboxClass: "icheckbox_' . $cssClassSuffix . '",
+                radioClass: "iradio_' . $cssClassSuffix . '",
+                increaseArea: "20%" // optional
+            });'
+        );
+    }
 }
